@@ -13,4 +13,6 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-.PHONI: install build games publish
+prompt:
+	poetry add prompt
+.PHONI: install build games publish prompt
