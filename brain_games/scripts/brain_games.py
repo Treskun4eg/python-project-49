@@ -9,6 +9,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-import cli
-from cli import name
 
