@@ -15,4 +15,7 @@ package-install:
 
 prompt:
 	poetry add prompt
+
+make lint:
+	poetry run flake8 brain_games
 .PHONI: install build games publish prompt
