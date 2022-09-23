@@ -18,6 +18,8 @@ def main():
     """Say hello and ask for a username."""
     print('Welcome to the Brain Games!')
     welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    
 
 
 if __name__ == '__main__':
