@@ -18,4 +18,10 @@ prompt:
 
 make lint:
 	poetry run flake8 brain_games
-.PHONI: install build games publish prompt
+
+brain-even:
+	poetry run brain-even
+
+package-reinstal:
+	pip install --user --force-reinstall dist/*.whl
+.PHONI: install build games publish prompt brain-even reinstall
