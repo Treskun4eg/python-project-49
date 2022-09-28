@@ -6,7 +6,7 @@ import prompt
 GET_ROUND = 3
 
 
-def your_answer():
+def your_answer(game):
     """
     Greet the user.
     Explain the rules of the game
@@ -16,7 +16,7 @@ def your_answer():
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for _ in range(GET_ROUND):
-        question, correct_answer = randome_number()
+        question, correct_answer = game.randome_number()
         correct = 'Correct!'
         print('Question: {arg}'.format(arg=question))
         answer = prompt.string('Your answer: ')
