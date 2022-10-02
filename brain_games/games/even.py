@@ -6,7 +6,7 @@ START = 0
 FINISH = 100
 
 
-def randome_number():
+def current_game():
     """Generate a random number and check if it's even."""
     question = random.randint(START, FINISH)
     if question % 2 == 0:
