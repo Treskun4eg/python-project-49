@@ -15,7 +15,7 @@ def your_answer(game):
     print(f'Hello, {name}!')
     print(game.DESCRIPTION)
     for _ in range(GET_ROUND):
-        question, correct_answer = game.randome_number()
+        question, correct_answer = game.current_game()
         correct = 'Correct!'
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
