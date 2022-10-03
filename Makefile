@@ -22,6 +22,9 @@ make lint:
 brain-even:
 	poetry run brain-even
 
+brain-calc:
+	poetry run brain-calc
+
 package-reinstal:
 	pip install --user --force-reinstall dist/*.whl
-.PHONI: install build games publish prompt brain-even reinstall
+.PHONI: install build games publish prompt brain-even reinstall brain-calc
