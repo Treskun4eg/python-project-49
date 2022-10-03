@@ -7,8 +7,14 @@ FINISH = 100
 
 
 def current_game():
-    rand_num = random.randint(START, FINISH)
-    random_operator = random.choice(['+', '-', '*'])
-    question = f'{rand_num} {random_operator} {rand_num}'
-    correct_answer = question
+    num_1 = random.randint(START, FINISH)
+    num_2 = random.randint(START, FINISH)
+    correct_expressions = {
+        '+': num_1 + num_2,
+        '-': num_1 - num_2,
+        '*': num_1 * num_2
+    }
+    random_expressions = random.choice(list(correct_expressions.keys()))
+    question = f'{num_1} {random_expressions} {num_2}'
+    correct_answer = str(correct_expressions[random_expressions])
     return question, correct_answer
