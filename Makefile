@@ -31,6 +31,9 @@ brain-gcd:
 brain-progression:
 	poetry run brain-progression
 
+brain-prime:
+	poetry run brain-prime
+
 package-reinstal:
 	pip install --user --force-reinstall dist/*.whl
 .PHONI: install build games publish prompt brain-even reinstall brain-calc
