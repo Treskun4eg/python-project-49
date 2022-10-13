@@ -3,13 +3,13 @@ name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["Treskun4eg <wagamamanowelli@gmail.com>"]
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+repository = "https://github.com/Treskun4eg/python-project-49"
 packages = [
   { include = "brain_games" },
 ]
-classifiers = [
-    Programming Language :: Python :: 3
-]
-repository = "https://github.com/Treskun4eg/python-project-49"
 
 [tool.poetry.dependencies]
 python = "^3.10"
