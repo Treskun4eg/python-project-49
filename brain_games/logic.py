@@ -1,5 +1,5 @@
 import prompt
-
+"""Adding the prompt module"""
 
 GET_ROUND = 3
 
