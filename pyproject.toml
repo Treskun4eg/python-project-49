@@ -6,6 +6,10 @@ authors = ["Treskun4eg <wagamamanowelli@gmail.com>"]
 packages = [
   { include = "brain_games" },
 ]
+classifiers = [
+    Programming Language :: Python :: 3
+]
+repository = "https://github.com/Treskun4eg/python-project-49"
 
 [tool.poetry.dependencies]
 python = "^3.10"
