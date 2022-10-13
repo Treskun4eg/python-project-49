@@ -11,7 +11,7 @@ def your_answer(game):
     Play a game with him
     """
     print('Welcome to the Brain Games!')
-    name = prompt.string('Mai I have your name? ')
+    name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.DESCRIPTION)
     for _ in range(GET_ROUND):
