@@ -36,5 +36,17 @@ poetry publish --dry-run
 python3 -m pip install --upgrade --force-reinstall dist/hexlet_code-0.1.0-py3-none-any.whl
 ```
 
-### ascinema
-##### https://asciinema.org/a/524948
+# Recording a code session via Asciinema
+## App installation
+* https://asciinema.org/a/529598
+## Demonstration of the project
+### 1. Brain-even
+* https://asciinema.org/a/528539 
+### 2. Brain-calcxx
+* https://asciinema.org/a/528540
+### 3. Brain-gcd
+* https://asciinema.org/a/528541
+### 4. Brain-progression
+* https://asciinema.org/a/528543
+### 5. Brain-prime
+* https://asciinema.org/a/528544
