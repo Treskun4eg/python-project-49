@@ -11,6 +11,10 @@ def current_game():
     question = random.randint(START, FINISH)
     q = 0
     for i in range(START_1, question // 2 + 1):
+        """
+        Check for the number of divisors
+        of a number from the given range
+        """
         if question % i == 0:
             q += 1
     if q <= 0:
