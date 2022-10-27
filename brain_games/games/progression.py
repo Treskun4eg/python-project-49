@@ -8,28 +8,22 @@ STEP_1 = 1
 STEP_2 = 10
 element_1 = 0
 element_2 = 9
-
-
-def FINISH():
-    i = 1
-    last_number = START + STEP
-    while i < 10:
-        last_number = last_number + STEP
-        i = i + 1
-    return last_number
+SEQUENCE_TERM = 10
 
 
 def current_game():
-    global START
-    global STEP
-    START = random.randint(START_1, START_2)
-    STEP = random.randint(STEP_1, STEP_2)
-    randome_progression = list(range(START, FINISH(), STEP))
+    INITIAL = random.randint(START_1, START_2)
+    SUCCESSIVE_MEMBERS = random.randint(STEP_1, STEP_2)
+    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * SUCCESSIVE_MEMBERS
+    randome_progression = list(range(INITIAL, LAST_TERM, SUCCESSIVE_MEMBERS))
     randome_element = random.randint(element_1, element_2)
-    correct_answer = str(randome_progression[randome_element])
-    randome_progression[randome_element] = '..'
-    question = ''
-    for progression in randome_progression:
-        question += " " + str(progression)
-    question = str(question.strip())
-    return question, correct_answer
+
+    def replace_value():
+        correct_answer = str(randome_progression[randome_element])
+        randome_progression[randome_element] = '..'
+        question = ''
+        for progression in randome_progression:
+            question += " " + str(progression)
+            question = str(question.strip())
+        return question, correct_answer
+    return replace_value()
