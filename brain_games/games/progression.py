@@ -6,8 +6,8 @@ START_1 = 1
 START_2 = 20
 STEP_1 = 1
 STEP_2 = 10
-element_1 = 0
-element_2 = 9
+index_first = 0
+index_last = 9
 SEQUENCE_TERM = 10
 
 
@@ -16,7 +16,7 @@ def current_game():
     COMMON_DIFFERECE = random.randint(STEP_1, STEP_2)
     LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * COMMON_DIFFERECE
     randome_progression = list(range(INITIAL, LAST_TERM, COMMON_DIFFERECE))
-    randome_index = random.randint(element_1, element_2)
+    randome_index = random.randint(index_first, index_last)
 
     def replace_value():
         correct_answer = str(randome_progression[randome_index])
