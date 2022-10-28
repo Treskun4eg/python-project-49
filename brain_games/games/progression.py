@@ -13,9 +13,9 @@ SEQUENCE_TERM = 10
 
 def current_game():
     INITIAL = random.randint(START_1, START_2)
-    SUCCESSIVE_MEMBERS = random.randint(STEP_1, STEP_2)
-    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * SUCCESSIVE_MEMBERS
-    randome_progression = list(range(INITIAL, LAST_TERM, SUCCESSIVE_MEMBERS))
+    COMMON_DIFFERECE = random.randint(STEP_1, STEP_2)
+    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * COMMON_DIFFERECE
+    randome_progression = list(range(INITIAL, LAST_TERM, COMMON_DIFFERECE))
     randome_element = random.randint(element_1, element_2)
 
     def replace_value():
