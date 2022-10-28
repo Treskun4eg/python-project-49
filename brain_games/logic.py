@@ -1,7 +1,7 @@
 import prompt
 """Adding the prompt module"""
 
-GET_ROUND = 3
+NUMBER_ROUNDS = 3
 
 
 def your_answer(game):
@@ -14,7 +14,7 @@ def your_answer(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(game.DESCRIPTION)
-    for _ in range(GET_ROUND):
+    for _ in range(NUMBER_ROUNDS):
         question, correct_answer = game.current_game()
         correct = 'Correct!'
         print(f'Question: {question}')
