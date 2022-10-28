@@ -9,12 +9,13 @@ FINISH = 100
 def current_game():
     num_1 = random.randint(START, FINISH)
     num_2 = random.randint(START, FINISH)
-    correct_expressions = {
+    # submit an operator and get the desired expression
+    list_operations = {
         '+': num_1 + num_2,
         '-': num_1 - num_2,
         '*': num_1 * num_2
     }
-    random_expressions = random.choice(list(correct_expressions.keys()))
+    random_expressions = random.choice(list(list_operations.keys()))
     question = f'{num_1} {random_expressions} {num_2}'
-    correct_answer = str(correct_expressions[random_expressions])
+    correct_answer = str(list_operations[random_expressions])
     return question, correct_answer
