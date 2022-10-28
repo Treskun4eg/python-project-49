@@ -16,11 +16,11 @@ def current_game():
     COMMON_DIFFERECE = random.randint(STEP_1, STEP_2)
     LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * COMMON_DIFFERECE
     randome_progression = list(range(INITIAL, LAST_TERM, COMMON_DIFFERECE))
-    randome_element = random.randint(element_1, element_2)
+    randome_index = random.randint(element_1, element_2)
 
     def replace_value():
-        correct_answer = str(randome_progression[randome_element])
-        randome_progression[randome_element] = '..'
+        correct_answer = str(randome_progression[randome_index])
+        randome_progression[randome_index] = '..'
         question = ''
         for progression in randome_progression:
             question += " " + str(progression)
