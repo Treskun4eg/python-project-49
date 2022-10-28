@@ -4,7 +4,7 @@ import prompt
 NUMBER_ROUNDS = 3
 
 
-def your_answer(game):
+def run_game(game):
     """
     Greet the user.
     Explain the rules of the game
