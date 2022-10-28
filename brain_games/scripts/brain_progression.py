@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Enter shebang to run python."""
 from brain_games.games import progression
-from brain_games.logic import your_answer
+from brain_games.logic import run_game
 
 
 def main():
-    your_answer(progression)
+    run_game(progression)
 
 
 if __name__ == '__main__':
