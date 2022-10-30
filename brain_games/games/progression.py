@@ -13,17 +13,14 @@ SEQUENCE_TERM = 10
 
 def current_game():
     INITIAL = random.randint(START_1, START_2)
-    COMMON_DIFFERECE = random.randint(STEP_1, STEP_2)
-    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * COMMON_DIFFERECE
-    randome_progression = list(range(INITIAL, LAST_TERM, COMMON_DIFFERECE))
+    DIFFERENCE = random.randint(STEP_1, STEP_2)
+    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * DIFFERENCE
+    randome_progression = list(range(INITIAL, LAST_TERM, DIFFERENCE))
     randome_index = random.randint(index_first, index_last)
 
     def replace_value():
         correct_answer = str(randome_progression[randome_index])
         randome_progression[randome_index] = '..'
-        question = ''
-        for progression in randome_progression:
-            question += " " + str(progression)
-            question = str(question.strip())
+        question = " ".join(map(str, randome_progression))
         return question, correct_answer
     return replace_value()
