@@ -20,7 +20,7 @@ def return_random_value():
     return randome_index, randome_progression
 
 
-def current_game():
+def play_game():
     randome_index, randome_progression = return_random_value()
     correct_answer = str(randome_progression[randome_index])
     randome_progression[randome_index] = '..'

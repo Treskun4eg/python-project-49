@@ -15,7 +15,7 @@ def run_game(game):
     print(f'Hello, {name}!')
     print(game.DESCRIPTION)
     for _ in range(NUMBER_ROUNDS):
-        question, correct_answer = game.current_game()
+        question, correct_answer = game.play_game()
         correct = 'Correct!'
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
