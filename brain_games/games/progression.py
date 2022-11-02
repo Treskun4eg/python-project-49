@@ -8,7 +8,7 @@ STEP_1 = 1
 STEP_2 = 10
 index_first = 0
 index_last = 9
-SEQUENCE_TERM = 10
+SEQUENCE_TERM = 11
 
 
 def return_random_value():
@@ -20,7 +20,8 @@ def return_random_value():
     return randome_index, randome_progression
 
 
-def current_game(randome_index, randome_progression):
+def current_game():
+    randome_index, randome_progression = return_random_value()
     correct_answer = str(randome_progression[randome_index])
     randome_progression[randome_index] = '..'
     question = " ".join(map(str, randome_progression))
