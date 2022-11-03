@@ -7,7 +7,7 @@ FINISH = 100
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def play_game():
+def start_round():
     question = random.randint(START, FINISH)
     q = 0
     for i in range(START_1, question // 2 + 1):
