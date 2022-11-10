@@ -6,7 +6,7 @@ START = 0
 FINISH = 100
 
 
-def determine_parity():
+def check_is_even():
     """Generate a random number and check if it's even."""
     question = random.randint(START, FINISH)
     if question % 2 == 0:
@@ -17,5 +17,5 @@ def determine_parity():
 
 
 def start_round():
-    question, correct_answer = determine_parity()
+    question, correct_answer = check_is_even()
     return question, correct_answer
