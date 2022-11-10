@@ -7,7 +7,7 @@ FINISH = 100
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def start_round():
+def check_prime_number():
     question = random.randint(START, FINISH)
     q = 0
     for i in range(START_1, question // 2 + 1):
@@ -21,4 +21,9 @@ def start_round():
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
+    return question, correct_answer
+
+
+def start_round():
+    question, correct_answer = check_prime_number()
     return question, correct_answer
