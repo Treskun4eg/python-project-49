@@ -20,14 +20,14 @@ def calculate_arguments():
 
 def generate_progression():
     INITIAL, DIFFERENCE, LAST_TERM = calculate_arguments()
-    randome_progression = list(range(INITIAL, LAST_TERM, DIFFERENCE))
-    randome_index = random.randint(index_first, index_last)
-    return randome_index, randome_progression
+    progression = list(range(INITIAL, LAST_TERM, DIFFERENCE))
+    index = random.randint(index_first, index_last)
+    return index, progression
 
 
 def start_round():
-    randome_index, randome_progression = generate_progression()
-    correct_answer = str(randome_progression[randome_index])
-    randome_progression[randome_index] = '..'
-    question = " ".join(map(str, randome_progression))
+    index, progression = generate_progression()
+    correct_answer = str(progression[index])
+    progression[index] = '..'
+    question = " ".join(map(str, progression))
     return question, correct_answer
