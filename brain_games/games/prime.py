@@ -24,6 +24,6 @@ def check_prime_number():
     return question, correct_answer
 
 
-def start_round():
+def get_round():
     question, correct_answer = check_prime_number()
     return question, correct_answer

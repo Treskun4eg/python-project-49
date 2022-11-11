@@ -25,7 +25,7 @@ def generate_progression():
     return index, progression
 
 
-def start_round():
+def get_round():
     index, progression = generate_progression()
     correct_answer = str(progression[index])
     progression[index] = '..'

@@ -7,7 +7,7 @@ FINISH = 20
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def start_round():
+def get_round():
     num_1 = random.randint(START, FINISH)
     num_2 = random.randint(START, FINISH)
     question = f'{num_1} {num_2}'

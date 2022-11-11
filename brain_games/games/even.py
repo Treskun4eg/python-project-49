@@ -16,6 +16,6 @@ def check_is_even():
     return question, correct_answer
 
 
-def start_round():
+def get_round():
     question, correct_answer = check_is_even()
     return question, correct_answer

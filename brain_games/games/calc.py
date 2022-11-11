@@ -6,7 +6,7 @@ START = 1
 FINISH = 100
 
 
-def start_round():
+def get_round():
     num_1 = random.randint(START, FINISH)
     num_2 = random.randint(START, FINISH)
     # submit an operator and get the desired expression
