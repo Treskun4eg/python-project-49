@@ -1,7 +1,7 @@
 import random
 
 
-START = 1
+START = 2
 START_1 = 2
 FINISH = 100
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
