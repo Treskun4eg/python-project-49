@@ -2,31 +2,26 @@ import random
 
 
 DESCRIPTION = 'What number is missing in the progression?'
-START_1 = 1
-START_2 = 20
-STEP_1 = 1
-STEP_2 = 10
+INITIAL_LOWER_BOUND = 1
+INITIAL_UPPER_BOUND = 20
+STEP_LOWER_BOUND = 1
+STEP_UPPER_BOUND = 10
 index_first = 0
 index_last = 9
-SEQUENCE_TERM = 11
+LENGTH = 11
 
 
-def calculate_arguments():
-    INITIAL = random.randint(START_1, START_2)
-    DIFFERENCE = random.randint(STEP_1, STEP_2)
-    LAST_TERM = INITIAL + (SEQUENCE_TERM - 1) * DIFFERENCE
-    return INITIAL, DIFFERENCE, LAST_TERM
-
-
-def generate_progression():
-    INITIAL, DIFFERENCE, LAST_TERM = calculate_arguments()
-    progression = list(range(INITIAL, LAST_TERM, DIFFERENCE))
-    index = random.randint(index_first, index_last)
-    return index, progression
+def generate_progression(INITIAL_TERM, DIFFERENCE, LENGTH):
+    LAST_TERM = INITIAL_TERM + (LENGTH - 1) * DIFFERENCE
+    progression = list(range(INITIAL_TERM, LAST_TERM, DIFFERENCE))
+    return progression
 
 
 def get_round():
-    index, progression = generate_progression()
+    INITIAL_TERM = random.randint(INITIAL_LOWER_BOUND, INITIAL_UPPER_BOUND)
+    DIFFERENCE = random.randint(STEP_LOWER_BOUND, STEP_UPPER_BOUND)
+    progression = generate_progression(INITIAL_TERM, DIFFERENCE, LENGTH)
+    index = random.randint(index_first, index_last)
     correct_answer = str(progression[index])
     progression[index] = '..'
     question = " ".join(map(str, progression))
