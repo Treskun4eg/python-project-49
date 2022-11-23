@@ -7,23 +7,17 @@ FINISH = 100
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def check_prime_number():
-    question = random.randint(START, FINISH)
+def is_prime(question):
     q = 0
-    for i in range(START_1, question // 2 + 1):
-        """
-        Check for the number of divisors
-        of a number from the given range
-        """
+    iteration_object = range(START_1, question // 2 + 1)
+    for i in iteration_object:
         if question % i == 0:
             q += 1
     if q <= 0:
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
-    return question, correct_answer
+        return True
 
 
 def get_round():
-    question, correct_answer = check_prime_number()
+    question = random.randint(START, FINISH)
+    correct_answer = 'yes' if is_prime(question) else 'no'
     return question, correct_answer
